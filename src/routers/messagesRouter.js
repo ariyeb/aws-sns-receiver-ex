@@ -4,8 +4,8 @@ const Notification = require('../models/notificationModel');
 const router = new express.Router();
 
 router.post("/sns", async (req, res) => {
-    const type = req.body.type;
-    
+    const type = req.body.Type;
+
     const notification = new Notification({
         type,
         message: "test"
