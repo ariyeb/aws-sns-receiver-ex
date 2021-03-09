@@ -5,10 +5,11 @@ const router = new express.Router();
 
 router.post("/sns", async (req, res) => {
     const type = req.body.Type;
+    console.log(req.body);
 
     const notification = new Notification({
         type,
-        message: "test"
+        message: "test",
     });
     try {
         await notification.save();
